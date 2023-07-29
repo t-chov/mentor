@@ -1,13 +1,19 @@
 import os
 
 import openai
-from click import command, version_option
+from click import Choice, command, option, version_option
 from dotenv import load_dotenv
 from rich.console import Console
 
 
 @command()
 @version_option(version='0.1.0')
+@option(
+    '-m', '--model',
+    type=Choice(['gpt-3.5-turbo', 'gpt-4']),
+    default='gpt-3.5-turbo',
+    help='model you want use'
+)
 def main() -> None:
     load_dotenv()
     console = Console()
