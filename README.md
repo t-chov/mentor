@@ -1,2 +1,3 @@
 # mentor
-A CLI client of OpenAI API
+
+Simple ChatGPT clone build by Streamlit
