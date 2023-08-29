@@ -1,16 +1,15 @@
 [tool.poetry]
 name = "mentor"
 version = "0.1.0"
-description = "A CLI client of OpenAI API"
+description = "Simple ChatGPT clone build by Streamlit"
 authors = ["TSUYUKI kohei <kotsuyuki@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-rich = "^13.4.2"
-click = "^8.1.6"
+python = ">=3.10,<4.0"
 openai = "^0.27.8"
-python-dotenv = "^1.0.0"
+streamlit = "^1.26.0"
+langchain = "^0.0.275"
 
 [tool.poetry.dev-dependencies]
 
