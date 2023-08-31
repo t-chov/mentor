@@ -4,9 +4,11 @@ from langchain.chat_models import ChatOpenAI
 from langchain.llms import OpenAI
 from langchain.schema import HumanMessage
 
+MODEL = "gpt-3.5-turbo"
+# MODEL = "gpt-4"
 
 openai_api_key = st.secrets['openai']['api_key']
-chat = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
+chat = ChatOpenAI(model_name=MODEL, openai_api_key=openai_api_key)
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
